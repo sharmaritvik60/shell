@@ -1,0 +1,27 @@
+C-shell
+	An attempt to implement the linux shell in C language.
+
+BUILTIN COMMANDS
+	The shell commands that have been implemented manually are cd, echo, pwd, ls and pinfo. The implemented version of echo is a bit different from the original terminal command. -l and -a flags have been implemented for ls command. User defined command 'nightswatch' has also been implemented.
+
+MODULES
+	I have created six dependency modules viz.
+    	main.c : This is the main module which is used to run the shell.
+
+    	prompt.c : This module displays the shell prompt.
+
+    	get_command.c : As the name of the module conveys, it is used to read user's input command(s).
+
+    	parse_command.c : This module contains the code to parse the input commands.
+
+    	execute_command.c : This module is used to identify the parsed commands and take approriate executive action(s). 
+
+    	inbuilts.c : This module contains all the builtin implementations of shell commands viz ls, cd, echo and pinfo.
+
+BONUS
+	Both bonus questions have been implemented i.e. nightswatch command and displaying terminated background process.
+
+COMPILING AND EXECUTION
+	I have made a makefile which compiles each of the dependencies I have created (.c and .h files which support the main program - main.c). The command "make" creates an object file after compilation and in the end compiles all of them with the main program shell.o (because it has the main function). It creates an executable file by the name "shell".
+
+To start the shell, just execute the "shell" executable file which is created after you run the "make" command (./shell)
